@@ -1,7 +1,8 @@
 # Life Expectancy Tableau Dashboard for The Data School
 
+Here is a breakdown of the notebooks in the repository:
 
-## [Data Cleaning Census Notebook](Data Cleaning Census.ipynb)
+## [Data Cleaning Census](Data Cleaning Census.ipynb)
 
 The following tables were obtained via API from the American Community Survey (ACS):
 
@@ -24,7 +25,7 @@ This process resulted in over **560 features**.
 
 Furthermore, approximately **45 features** from the Community Health Rankings (CHR) were found to be derivable using ACS Census data, following the CHR methodology. These calculated values were used to fill in missing CHR data. This required downloading additional Census Bureau CSV files relevant to the CHR feature calculations.
 
-## [Data Cleaning CHR Notebook](Data Cleaning CHR.ipynb)
+## [Data Cleaning CHR (Community Health Rankings)](Data Cleaning CHR.ipynb)
 
 The files were downloaded as CSV files from the Community Health Rankings website, and it was a straightforward process of uploading the files, concatenating the dataframes into one dataframe, and then creating a dictionary to change their heading codes into human readable headers in a similar format to the Census headings.
 
@@ -46,13 +47,11 @@ In previous notebooks, we extracted as many features as possible from the **Cens
 ### **Imputation Process**
 
 - After standardizing FIPS codes, we applied **Python-based imputation techniques**, including:
+
   - **K-Nearest Neighbors (KNN)**
   - **Seasonal AutoRegressive Integrated Moving Average with Exogenous Variables (SARIMAX)**
   - **Random Forest Regressor**
-
-### **Result**
-
-- The cleaned dataset contains **116 features with no missing values**.
+- The resulting dataset contained **116 features with no missing values**.
 
 ## [Feature Engineering Notebook](Feature Engineering.ipynb)
 
@@ -84,7 +83,7 @@ After this process, we finalized a dataset with **52 features,** ensuring strong
 
 ## Final Dataset
 
-[H]()ere is the final set of features 
+[H]()ere is the final set of features that was uploaded to Tableau for further analysis
 
 ### **Health Outcomes**
 
@@ -118,12 +117,15 @@ After this process, we finalized a dataset with **52 features,** ensuring strong
 
 ### **Demographics**
 
-- **Population:**  Population Density
-- **Age Group:**  % Below 18 Years of Age, % 65 and Older
-- **Race/Ethnicity:**  % Non-Hispanic Black, % American Indian or Alaska Native, % Asian, % Native Hawaiian or Other Pacific Islander, % Hispanic, % Non-Hispanic White, % Not Proficient in English, % Female, % Rural
+- **Populatio:**  Population, Population Density, % Rural
+- **Age and Gender:**  % Below 18 Years of Age, % 65 and Older
+- **Race/Ethnicity:**  % Non-Hispanic Black, % Non-Hispanic White, % American Indian or Alaska Native, % Asian, % Native Hawaiian or Other Pacific Islander, % Hispanic,
+- % Not Proficient in English, % Female,
 
 ## Citations:
 
-Institute for Health Metrics and Evaluation (IHME). Life Expectancy & Probability of Death Data Visualization. Seattle, WA: IHME, University of Washington, 2016. Available from http://vizhub.healthdata.org/le/ . (Accessed January 2025)
+Institute for Health Metrics and Evaluation. (2022). *United States mortality rates and life expectancy by county, race, and ethnicity, 2000–2019* [Data set].  Institute for Health Metrics and Evaluation (IHME) . https://www.healthdata.org
 
 University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org.
+
+U.S. Census Bureau. (2022). *Selected Social, Economic, Housing, and Demographic Characteristics: American Community Survey (DP02, DP03, DP04, DP05), 2010-2022* [Data set]. https://data.census.gov
