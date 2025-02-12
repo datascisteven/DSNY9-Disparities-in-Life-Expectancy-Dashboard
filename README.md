@@ -1,8 +1,10 @@
-# Life Expectancy Tableau Dashboard for The Data School
+# Disparities in Life Expectancy Dashboard for DSNY9 Application
 
 Here is a breakdown of the notebooks in the repository:
 
-## [Data Cleaning Census](Data Cleaning Census.ipynb)
+## Data Cleaning Census Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Data Cleaning Census.ipynb)
 
 The following tables were obtained via API from the American Community Survey (ACS):
 
