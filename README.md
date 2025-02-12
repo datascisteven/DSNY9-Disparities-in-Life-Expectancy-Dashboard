@@ -4,7 +4,7 @@ Here is a breakdown of the notebooks in the repository:
 
 ## Data Cleaning Census Notebook
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Data Cleaning Census.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Data%20Cleaning%20Census.ipynb)
 
 The following tables were obtained via API from the American Community Survey (ACS):
 
@@ -27,13 +27,17 @@ This process resulted in over **560 features**.
 
 Furthermore, approximately **45 features** from the Community Health Rankings (CHR) were found to be derivable using ACS Census data, following the CHR methodology. These calculated values were used to fill in missing CHR data. This required downloading additional Census Bureau CSV files relevant to the CHR feature calculations.
 
-## [Data Cleaning CHR (Community Health Rankings)](Data Cleaning CHR.ipynb)
+## Data Cleaning CHR (Community Health Rankings) Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Data%20Cleaning%20CHR.ipynb)
 
 The files were downloaded as CSV files from the Community Health Rankings website, and it was a straightforward process of uploading the files, concatenating the dataframes into one dataframe, and then creating a dictionary to change their heading codes into human readable headers in a similar format to the Census headings.
 
-This resulted in just **over 200 different features** with potential data ranging from **2010 to 2024**.
+This resulted in just **over 200 different features** with potential data ranging from **2010 to 204**.
 
-## [Data Merging and Imputation Notebook](Data Merging and Imputation.ipynb)
+## Data Merging and Imputation Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Data%20Merging%20and%20Imputation.ipynb)
 
 In previous notebooks, we extracted as many features as possible from the **Census** and **Community Health Rankings (CHR)** datasets. While completeness varied across columns, we identified patterns in the missing data, which informed our imputation strategy.
 
@@ -55,7 +59,9 @@ In previous notebooks, we extracted as many features as possible from the **Cens
   - **Random Forest Regressor**
 - The resulting dataset contained **116 features with no missing values**.
 
-## [Feature Engineering Notebook](Feature Engineering.ipynb)
+## Feature Engineering Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Feature%20Engineering.ipynb)
 
 Among the remaining features, it was evident that many were still redundant. To refine the dataset, we initially applied domain intuition to eliminate overlapping variables:
 
@@ -85,7 +91,7 @@ After this process, we finalized a dataset with **52 features,** ensuring strong
 
 ## Final Dataset
 
-[H]()ere is the final set of features that was uploaded to Tableau for further analysis
+Here is the final set of features that was uploaded to Tableau for further analysis:
 
 ### **Health Outcomes**
 
@@ -95,31 +101,30 @@ After this process, we finalized a dataset with **52 features,** ensuring strong
 ### **Health Factors**
 
 - #### **Health Behaviors**
-
   - **Tobacco Use:** Adult Smoking
   - **Diet and Exercise:** Adult Obesity, Food Environment Index, Food Insecurity, Limited Access to Healthy Foods, Physical Inactivity, Access to Exercise Opportunities
   - **Alciohol and Drug Use:** Motor Vehicle Crash Deaths, Drug Overdose Deaths, Excessive Drinking, Alcohol-Impaired Driving Deaths
   - **Sexual Activity:** Sexually Transmitted Infections, Teen Births
   - **Other Health Behaviors:** Insufficient Sleep
-- #### **Clinical Care**
 
+- #### **Clinical Care**
   - **Access to Care:** Uninsured, Uninsured Adults, Uninsured Children, Primary Care Physicians, Dentists, Mental Health Providers, Other Primary Care Providers
   - **Quality of Care:** Preventable Hospital Stays, Mammography Screening, Flu Vaccinations
-- #### **Social and Economic Factors**
 
+- #### **Social and Economic Factors**
   - **Employment:** Unemployment
   - **Education:** High School Completion, High School Graduation, Some College, Disconnected Youth, Reading Scores, Math Scores, School Segregation, School Funding Adequacy
   - **Income:** Children in Poverty, Gender Pay Gap, Median Household Income, Income Inequality, Living Wage, Children Eligible for Free or Reduced Price Lunch
   - **Family and Social Support:** Inadequate Social Support, Children in Single-Parent Households, Residential Segregation - Black/White, Child Care Cost Burden, Child Care Centers, Social Assocations
   - **Community Safety:** Homicides, Suicides, Firearm Fatalities, Motor Vehicle Crash Deaths, Juvenile Arrests, Injury Deaths, Violent Crime
-- #### **Physical Environment**
 
+- #### **Physical Environment**
   - **Air and Water Quality**: Air Pollution - Particulate Matter, Drinking Water Violations
   - **Housing and Transit:** Homeownership, Severe Housing Problems, Driving Alone to Work, Long Commute - Driving Alone
 
 ### **Demographics**
 
-- **Populatio:**  Population, Population Density, % Rural
+- **Population:**  Population, Population Density, % Rural
 - **Age and Gender:**  % Below 18 Years of Age, % 65 and Older
 - **Race/Ethnicity:**  % Non-Hispanic Black, % Non-Hispanic White, % American Indian or Alaska Native, % Asian, % Native Hawaiian or Other Pacific Islander, % Hispanic,
 - % Not Proficient in English, % Female,
