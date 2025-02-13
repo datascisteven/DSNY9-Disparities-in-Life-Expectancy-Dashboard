@@ -89,6 +89,23 @@ Additionally, we analyzed the **top positive and negative correlations** during 
 
 After this process, we finalized a dataset with **52 features,** ensuring strong correlations while maintaining VIF scores below 5
 
+## Preparing for Tableau Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/datascisteven/DSNY9-Disparities-in-Life-Expectancy-Dashboard/blob/main/Preparing%20for%20Tableau.ipynb)
+
+The final steps in the data preparation involved:
+
+* **Adding Geographic Variables**
+  * Allowing for analysis by region and division
+* **Adding Urbanization Level by Year**
+  * Metropolitan (large, medium, small) vs. Non-metropolitan (micropolitan, non-core) counties
+* **Adding County Life Expectancy Data by Race/Ethnicity**
+  * Combining 2010-2019 from IHME and 2020-2024 from CHR
+  * Resolving FIPS Code changes from 2010-2024
+  * Used for calculating change in life expectancy for race and ethnicity from 2010 to 2024
+* **Creating Percentile Ranks for Features**
+  * Used for calculating life expectancy gaps between top and bottom percentiles
+
 ## Final Dataset
 
 Here is the final set of features that was uploaded to Tableau for further analysis:
@@ -101,33 +118,35 @@ Here is the final set of features that was uploaded to Tableau for further analy
 ### **Health Factors**
 
 - #### **Health Behaviors**
+
   - **Tobacco Use:** Adult Smoking
   - **Diet and Exercise:** Adult Obesity, Food Environment Index, Food Insecurity, Limited Access to Healthy Foods, Physical Inactivity, Access to Exercise Opportunities
   - **Alciohol and Drug Use:** Motor Vehicle Crash Deaths, Drug Overdose Deaths, Excessive Drinking, Alcohol-Impaired Driving Deaths
   - **Sexual Activity:** Sexually Transmitted Infections, Teen Births
   - **Other Health Behaviors:** Insufficient Sleep
-
 - #### **Clinical Care**
+
   - **Access to Care:** Uninsured, Uninsured Adults, Uninsured Children, Primary Care Physicians, Dentists, Mental Health Providers, Other Primary Care Providers
   - **Quality of Care:** Preventable Hospital Stays, Mammography Screening, Flu Vaccinations
-
 - #### **Social and Economic Factors**
+
   - **Employment:** Unemployment
   - **Education:** High School Completion, High School Graduation, Some College, Disconnected Youth, Reading Scores, Math Scores, School Segregation, School Funding Adequacy
   - **Income:** Children in Poverty, Gender Pay Gap, Median Household Income, Income Inequality, Living Wage, Children Eligible for Free or Reduced Price Lunch
   - **Family and Social Support:** Inadequate Social Support, Children in Single-Parent Households, Residential Segregation - Black/White, Child Care Cost Burden, Child Care Centers, Social Assocations
   - **Community Safety:** Homicides, Suicides, Firearm Fatalities, Motor Vehicle Crash Deaths, Juvenile Arrests, Injury Deaths, Violent Crime
-
 - #### **Physical Environment**
+
   - **Air and Water Quality**: Air Pollution - Particulate Matter, Drinking Water Violations
-  - **Housing and Transit:** Homeownership, Severe Housing Problems, Driving Alone to Work, Long Commute - Driving Alone
+  - **Housing and Transit:** Homeownership, Severe Housing Problems, Driving Alone to Work, Long Commute - Driving Alone, Housing Units
 
 ### **Demographics**
 
-- **Population:**  Population, Population Density, % Rural
-- **Age and Gender:**  % Below 18 Years of Age, % 65 and Older
+- **Population:**  Population
+- **Age and Gender:**  % Below 18 Years of Age, % 65 and Older, % Female
 - **Race/Ethnicity:**  % Non-Hispanic Black, % Non-Hispanic White, % American Indian or Alaska Native, % Asian, % Native Hawaiian or Other Pacific Islander, % Hispanic,
-- % Not Proficient in English, % Female,
+- **Language Proficiency:** % Not Proficient in English
+- **Urban/Rural:** Population, Housing Unit Density, % Rural
 
 ## Citations:
 
